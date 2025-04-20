@@ -59,12 +59,13 @@ export function Header() {
                 className='flex items-center gap-2 text-xl font-bold'
               >
                 <ShoppingBag className='h-6 w-6' />
-                <span>AI Amazona</span>
+                <span className="hidden sm:inline">AI Amazona</span>
+                <span className="sm:hidden">Store</span>
               </Link>
             </div>
 
             {/* Products Catalog Menu */}
-            <div className="ml-6">
+            <div className="ml-2 sm:ml-6">
               <CategoryMenu />
             </div>
 
@@ -77,7 +78,7 @@ export function Header() {
             </div>
 
             {/* Navigation */}
-            <nav className='flex items-center gap-4'>
+            <nav className='flex items-center gap-2 sm:gap-4'>
               <Button variant='ghost' size='icon' asChild>
                 <Link href='/products'>
                   <Search className='h-5 w-5 sm:hidden' />
@@ -136,7 +137,7 @@ export function Header() {
               ) : (
                 <Button variant='default' onClick={openAuthModal} className='flex items-center gap-2'>
                   <User className='h-5 w-5' />
-                  <span>Account</span>
+                  <span className="hidden md:inline">Account</span>
                 </Button>
               )}
             </nav>
