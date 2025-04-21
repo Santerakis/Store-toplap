@@ -51,7 +51,7 @@ export default async function HomePage() {
 
   return (
     <main className='space-y-12 my-8'>
-      <section aria-labelledby="main-banner" className='container mx-auto px-4 sm:px-6 lg:px-8'>
+      <section aria-labelledby="main-banner" className='container mx-auto px-4 sm:px-6 lg:px-8 max-w-[1400px]'>
         <h1 id="main-banner" className="text-4xl font-bold mb-8 text-center sr-only">Toplap Store - Магазин инновационной электроники</h1>
         <div className='relative'>
           <Carousel
@@ -88,12 +88,12 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section aria-labelledby="latest-products" className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section aria-labelledby="latest-products" className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-[1400px]">
         <h2 id="latest-products" className="text-3xl font-bold mb-6">Новинки в нашем магазине</h2>
         <LatestProducts products={latestProducts} />
       </section>
 
-      <section aria-labelledby="about-us" className="container mx-auto px-4 sm:px-6 lg:px-8 bg-gray-50 py-10 rounded-lg">
+      <section aria-labelledby="about-us" className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-[1400px] bg-gray-50 py-10 rounded-lg">
         <h2 id="about-us" className="text-3xl font-bold mb-6">О магазине Toplap Store</h2>
         <div className="prose max-w-none">
           <p className="text-lg">

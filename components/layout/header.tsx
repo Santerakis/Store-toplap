@@ -49,8 +49,8 @@ export function Header() {
 
   return (
     <>
-      <header className='border-b'>
-        <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
+      <header className='border-b w-full'>
+        <div className='container mx-auto px-4 sm:px-6 lg:px-8 max-w-[1400px] w-full'>
           <div className='flex h-16 items-center justify-between'>
             {/* Logo */}
             <div className='flex-shrink-0'>
@@ -70,7 +70,7 @@ export function Header() {
             </div>
 
             {/* Search */}
-            <div className='hidden sm:block flex-1 max-w-2xl mx-8'>
+            <div className='hidden sm:block flex-1 max-w-2xl mx-8 md:mx-8 sm:mx-4'>
               <SearchAutocomplete 
                 initialValue={searchQuery}
                 onSearch={handleSearch}
@@ -78,7 +78,7 @@ export function Header() {
             </div>
 
             {/* Navigation */}
-            <nav className='flex items-center gap-2 sm:gap-4'>
+            <nav className='flex items-center gap-2 sm:gap-2 md:gap-4'>
               <Button variant='ghost' size='icon' asChild>
                 <Link href='/products'>
                   <Search className='h-5 w-5 sm:hidden' />

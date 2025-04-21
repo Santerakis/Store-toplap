@@ -10,6 +10,7 @@ import React from 'react'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Toaster as SonnerToaster } from 'sonner'
+import { CookieConsent } from '@/components/ui/cookie-consent'
 
 // Инициализируем шрифт Inter
 const inter = Inter({ subsets: ['latin', 'cyrillic'], variable: '--font-inter' })
@@ -70,7 +71,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  manifest: '/site.webmanifest',
+  manifest: '/manifest.json',
   alternates: {
     canonical: 'https://toplap.store',
     languages: {
@@ -91,6 +92,7 @@ export default async function RootLayout({
     <html lang='ru'>
       <head>
         <link rel="canonical" href="https://toplap.store" />
+        <link rel="manifest" href="/manifest.json" />
         
         {/* Structured data scripts are now moved to the next/script component with lazyOnload strategy */}
         <Script 
@@ -153,6 +155,8 @@ export default async function RootLayout({
             <Analytics />
             <SpeedInsights />
             <SonnerToaster position="top-right" richColors closeButton />
+            <Toaster />
+            <CookieConsent />
           </CartProvider>
         </SessionProvider>
       </body>
